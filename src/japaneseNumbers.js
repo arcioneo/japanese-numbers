@@ -18,11 +18,11 @@ export default function JapaneseNumbers() {
     }
 
     return (
-        <div className="timeGuesser">
-            <div className="clockContainer">
+        <div className="numberGuesser">
+            <div className="imageContainer">
                 <img src="./img/qm.jpg" height="200px" width="150px" />
             </div>
-            <div className="whatTimeIsIt">
+            <div className="question">
                 <font>Kore wa nan-ban desuka</font>
             </div>
             <div className="formatedNumber">
