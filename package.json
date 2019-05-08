@@ -1,6 +1,9 @@
 {
   "name": "japanese-numbers",
   "version": "0.1.0",
+  "engines": {
+    "node": "11.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/arcioneo/japanese-numbers.git"
