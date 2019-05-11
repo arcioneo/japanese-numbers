@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { getNumberAsText } from './numberToText'
 import { getImgName } from './imageProvider'
 import { getN } from './n'
+import { format } from './numberFormatter'
 import './japaneseNumbers.css'
 
 export default function JapaneseNumbers() {
     const n = getN()
-    const [number, setNumber] = useState(n)
+    const [number, setNumber] = useState(format(n))
     const [textNumber, setTextNumber] = useState(getNumberAsText(n))
     const [visibleAnswer, setVisibleAnswer] = useState(false)
     const [imgName, setImgName] = useState(getImgName())
-
     const changeVisibleAnswer = () => { setVisibleAnswer(!visibleAnswer) }
 
-    function tryAnother() {
+    const tryAnother = () => {
         const n = getN()
 
         setVisibleAnswer(false)
         setImgName(getImgName())
-        setNumber(n)
+        setNumber(format(n))
         setTextNumber(getNumberAsText(n))
     }
 
@@ -26,7 +26,7 @@ export default function JapaneseNumbers() {
         <div className="mainContainer">
             <div className="numberGuesser">
                 <div className="imageContainer">
-                    <img src={imgName} height="200px" width="150px" />
+                    <img src={imgName} height="200px" width="150px" alt="a random pic" />
                 </div>
                 <div className="question">
                     <font>Kore wa nan-ban desuka</font>

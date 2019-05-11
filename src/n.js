@@ -3,12 +3,11 @@ export function getN() {
     const max=1000000
     const mid = Math.floor((max - min) / 2)
 
-    let n = getRandomNumber(min, max)
-    n = n > mid ? getRandomNumber(min, max) : mid
+    //let n = getRandomNumber(min, max)
+    //n = n >= mid ? getRandomNumber(min, max) : mid
 
-    return n
+    return getRandomNumber(min, max)
 }
-
 
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (+max - +min)) + +min
