@@ -1,6 +1,6 @@
 {
   "name": "japanese-numbers",
-  "version": "0.1.2",
+  "version": "0.1.21",
   "engines": {
     "node": "11.1.0"
   },

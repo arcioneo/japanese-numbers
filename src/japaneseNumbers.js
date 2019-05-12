@@ -8,7 +8,7 @@ import './japaneseNumbers.css'
 export default function JapaneseNumbers() {
     const n = getN()
     const [number, setNumber] = useState(format(n))
-    const [textNumber, setTextNumber] = useState(getNumberAsText(n))
+    const [textNumber, setTextNumber] = useState(getNumberAsText(n) + ' desu')
     const [visibleAnswer, setVisibleAnswer] = useState(false)
     const [imgName, setImgName] = useState(getImgName())
     const changeVisibleAnswer = () => { setVisibleAnswer(!visibleAnswer) }
@@ -19,7 +19,7 @@ export default function JapaneseNumbers() {
         setVisibleAnswer(false)
         setImgName(getImgName())
         setNumber(format(n))
-        setTextNumber(getNumberAsText(n))
+        setTextNumber(getNumberAsText(n) + ' desu')
     }
 
     return (
@@ -29,7 +29,7 @@ export default function JapaneseNumbers() {
                     <img src={imgName} height="200px" width="150px" alt="a random pic" />
                 </div>
                 <div className="question">
-                    <font>Kore wa nan-ban desuka</font>
+                    <font>Kono suji (bangou) ha nandesuka</font>
                 </div>
                 <div className="formatedNumber">
                     {number}
