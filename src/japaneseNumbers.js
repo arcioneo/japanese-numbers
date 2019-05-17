@@ -41,6 +41,8 @@ export default function JapaneseNumbers() {
                     <font>SEE ANSWER</font>
                 </div>
                 <div className="linksToOtherApps">
+                    <a href="http://japanese-hiragana-trivia.herokuapp.com/">Click to study Hiragana...</a>
+                    <p />
                     <a href="http://japanese-hours.herokuapp.com/">Click to study Japanese hours...</a>
                 </div>
                 <button className="tryAnother" onClick={tryAnother}>Try Another</button>
